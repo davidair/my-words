@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--
+Copyright 2020 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://my-words-69377.firebaseapp.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Words</title>
+
+  <link rel="stylesheet" type="text/css" href="styles/mywords.css">
+  <link rel="stylesheet" type="text/css" href="styles/flipcard.css">
+
+  <link rel="stylesheet" type="text/css"
+    href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Weather PWA">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+
+  <!-- Windows -->
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+
+  <!-- Material Components -->
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+
+  <!-- Firebase UI -->
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+</head>
+
+<body>
+  <aside class="mdc-drawer mdc-drawer--dismissible">
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">format_list_bulleted</i>
+          <span class="mdc-list-item__text">List</span>
+        </a>
+        <a class="mdc-list-item" href="#cards">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
+          <span class="mdc-list-item__text">Flashcards</span>
+        </a>
+        <a class="mdc-list-item" href="#account">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">account_circle</i>
+          <span class="mdc-list-item__text">Account</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <header class="mdc-top-app-bar" id="app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
+        <span class="mdc-top-app-bar__title">My Words</span>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+        <a href="#" id="butAvatar" class="material-icons mdc-top-app-bar__action-item avatar" aria-label="Sign out"
+          alt="Sign out"></a>
+      </section>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="mdc-top-app-bar--fixed-adjust">
+      <div id="firebaseui-auth-container"></div>
+      <!-- Content gets inserted here -->
+      <div class="words">
+
+      </div>
+
+      <button class="mdc-fab app-fab--absolute" aria-label="Add" id="fab">
+        <span class="mdc-fab__icon material-icons">add</span>
+      </button>
+    
+    </div>
+  </main>
+
+  <!-- Word card template -->
+  <!-- Get more from https://material-components.github.io/material-components-web-catalog/#/component/card -->
+  <div class="mdc-card word-card" id="card-template" style="display:none">
+    <h2 class="mdc-typography--headline6 word"></h2>
+    <div class="mdc-typography--body2 definition"></div>
+    <div class="mdc-card__actions">
+      <div class="mdc-card__action-icons">
+          <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon web-search"
+          title="Web Search" data-mdc-ripple-is-unbounded="true">search</button>
+
+          <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon image-search"
+          title="Image Search" data-mdc-ripple-is-unbounded="true">image_search</button>
+
+          <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon delete-word"
+          title="Delete" data-mdc-ripple-is-unbounded="true">delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- User account card -->
+  <div class="mdc-card word-card" id="user-account-card" style="display:none">
+    <h2 class="mdc-typography--headline6 name"></h2>
+    <h2 class="mdc-typography--body2 email"></h2>
+  </div>
+
+  <!-- Flash  card -->
+  <div class="flip-card" id="flash-card" style="display:none">
+      <div class="flip-card-inner">
+          <div class="flip-card-front mdc-card">
+              <h2 class="mdc-typography--headline3 word"></h2>
+              <div class="mdc-card__actions">
+                <div class="mdc-card__action-icons">
+                  <button class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded" id="flash-card-less">less of it</button>
+                  <button class="mdc-button mdc-card__action mdc-card__action--button mdc-ripple-upgraded" id="flash-card-more">more of it</button>
+                </div>
+              </div>
+          </div>
+          <div class="flip-card-back mdc-card">
+              <div class="mdc-typography--headline6 definition"></div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Add Word Dialog -->
+  <div class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="add-word-dialog"
+    aria-describedby="my-dialog-content" id="add-word-dialog">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface">
+        <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+        <h2 class="mdc-dialog__title" id="my-dialog-title"><!--
+-->Add a word<!--
+  --></h2>
+        <div class="mdc-dialog__content" id="my-dialog-content">
+          <!-- Content goes here -->
+        </div>
+        <footer class="mdc-dialog__actions">
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="no">
+            <span class="mdc-button__label">Cancel</span>
+          </button>
+          <button type="button" class="mdc-button mdc-dialog__button" id="add_word_ok_button">
+            <span class="mdc-button__label">OK</span>
+          </button>
+        </footer>
+      </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+
+  <!-- Delete Word Dialog -->
+  <div class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="delete-word-dialog"
+    aria-describedby="my-dialog-content" id="delete-word-dialog">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface">
+        <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+        <h2 class="mdc-dialog__title" id="my-dialog-title"><!--
+-->Deleting a word<!--
+  --></h2>
+        <div class="mdc-dialog__content" id="my-dialog-content">
+          This action cannot be undone. Are you sure you want to continue?
+        </div>
+        <footer class="mdc-dialog__actions">
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="no">
+            <span class="mdc-button__label">Cancel</span>
+          </button>
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes">
+            <span class="mdc-button__label">OK</span>
+          </button>
+        </footer>
+      </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+
+  <!-- Word Detail Dialog -->
+  <div class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="word-detail-dialog"
+    aria-describedby="my-dialog-content" id="word-detail-dialog">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface">
+        <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+        <h2 class="mdc-dialog__title" id="my-dialog-title"><!--
+-->[WORD]<!--
+  --></h2>
+        <div class="mdc-dialog__content" id="my-dialog-content">
+          <!-- Content goes here -->
+        </div>
+        <footer class="mdc-dialog__actions">
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="no">
+            <span class="mdc-button__label">Close</span>
+          </button>
+        </footer>
+      </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>  
+
+  <script src="scripts/definitions.js"></script>
+  <script src="scripts/word_parser.js"></script>
+  <script src="scripts/app.js"></script>
+
+</body>
+
+</html>

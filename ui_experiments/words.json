@@ -1,0 +1,522 @@
+[
+    {
+        "definition": "a state of agitation or fuss, especially about something unimportant",
+        "word": "ado",
+        "id": "KpvMtKsSMHzsCWo9PQhN"
+    },
+    {
+        "definition": "the orientation of an aircraft or spacecraft, relative to the direction of travel.",
+        "flash_weight": -3,
+        "word": "attitude",
+        "id": "SLno5Z5yiUe2zhUHTRRR"
+    },
+    {
+        "definition": "kind and friendly towards a younger or less experienced person",
+        "word": "avuncular",
+        "id": "kVwzEVYB7ql4udxo6QqS"
+    },
+    {
+        "definition": "a small pointed tool used for piercing holes, especially in leather.",
+        "flash_weight": -5,
+        "word": "awl",
+        "id": "Sl5fLGgRiPe1Jhnh3UGI"
+    },
+    {
+        "definition": "an ancient burial mound.",
+        "flash_weight": -2,
+        "word": "barrow",
+        "id": "429uP8gdLoDGrhEQiBgK"
+    },
+    {
+        "definition": "make a gesture with the hand, arm, or head to encourage or instruct someone to approach or follow",
+        "word": "beckon",
+        "id": "yDWbfloPDLRQs5FHbmNT"
+    },
+    {
+        "definition": "a straight line between two places.",
+        "word": "beeline",
+        "id": "2j2qLW5aqJbPvfrGA5g5"
+    },
+    {
+        "definition": "(of a person or animal) emit a deep loud roar, typically in pain or anger",
+        "word": "bellow",
+        "id": "RUO4341Na72zyLZTvq8K"
+    },
+    {
+        "definition": "a device with an air bag that emits a stream of air when squeezed together with two handles, used for blowing air into a fire",
+        "flash_weight": -2,
+        "word": "bellows",
+        "id": "oKa4fgk6JGLGfrCb4MQJ"
+    },
+    {
+        "definition": "a legacy",
+        "word": "bequest",
+        "id": "sJgP3H9dLgzLzywsSSOL"
+    },
+    {
+        "definition": "Individually or custom made.",
+        "word": "bespoke",
+        "id": "aZR2cpNSGdJmh0U1c4Bn"
+    },
+    {
+        "definition": "in a way that shows a casual and cheerful indifference considered to be callous or improper",
+        "flash_weight": 1,
+        "word": "blithely",
+        "id": "LEwN7G4MWGnhvneOl994"
+    },
+    {
+        "definition": "an unnecessary, wasteful, or fraudulent project",
+        "flash_weight": -2,
+        "word": "boondoggle",
+        "id": "ZvlNrvjpTDgvYsVOqIGL"
+    },
+    {
+        "definition": "a prickly scrambling shrub of the rose family, especially a blackberry.",
+        "flash_weight": -1,
+        "word": "bramble",
+        "id": "1ZIhfIUgRQ8eHA5eIcQN"
+    },
+    {
+        "definition": "a plant of a genus that includes cabbage, swede, rape, and mustard.",
+        "flash_weight": -1,
+        "word": "brassica",
+        "id": "VI3rqTsLRI51P7a4kmxF"
+    },
+    {
+        "definition": "an ancient Greek or Roman herald's wand, typically one with two serpents twined round it, carried by the messenger god Hermes or Mercury.",
+        "flash_weight": -1,
+        "word": "caduceus",
+        "id": "VDtamFfwVAw5jTEotvKR"
+    },
+    {
+        "definition": "a conference of members of a legislative body who belong to a particular party or faction",
+        "flash_weight": 0,
+        "word": "caucus",
+        "id": "8nz3R8xb4pSbEQVAe2G6"
+    },
+    {
+        "definition": "an instructor or trainer in sport",
+        "word": "coach",
+        "id": "QMHQnLLAwxtWjYo3ImJI"
+    },
+    {
+        "definition": "secret or illegal cooperation or conspiracy in order to deceive others",
+        "flash_weight": -3,
+        "word": "collusion",
+        "id": "NDIo5pJCMAYFlXoKOZ04"
+    },
+    {
+        "definition": "combine (two or more sets of information, texts, ideas, etc.) into one",
+        "flash_weight": -1,
+        "word": "conflate",
+        "id": "S6TLP1o0Qc43LQNw3Kjn"
+    },
+    {
+        "definition": "a dark brown oil containing various phenols and other organic compounds, distilled from coal tar and used as a wood preservative.",
+        "flash_weight": -3,
+        "word": "creosote",
+        "id": "UK9mRLpvPHKpwiRg7bFZ"
+    },
+    {
+        "definition": "a low platform for a lectern or throne.",
+        "word": "dais",
+        "id": "WK5J15IBkHipEIMM3PBw"
+    },
+    {
+        "definition": "a casual romantic or sexual relationship",
+        "flash_weight": 2,
+        "word": "dalliance",
+        "id": "oKGw9TLq6kcSJNiofzvs"
+    },
+    {
+        "definition": "waste time; be slow",
+        "flash_weight": 2,
+        "word": "dawdle",
+        "id": "NuCmWO2x1MWGv1DRYAni"
+    },
+    {
+        "definition": "Affectedly modest, decorous, or serious; making a show of gravity.",
+        "word": "demure",
+        "id": "nnvOIvfrcjDAf9bqJE5u"
+    },
+    {
+        "definition": "lacking a plan, purpose, or enthusiasm",
+        "flash_weight": -1,
+        "word": "desultory",
+        "id": "6Pj4ouUeTm04Cac73njL"
+    },
+    {
+        "definition": "modest or shy because of a lack of self-confidence",
+        "flash_weight": 1,
+        "word": "diffident",
+        "id": "jvUoP8SjUprZlYhxGvdY"
+    },
+    {
+        "definition": "vivacity and enthusiasm",
+        "flash_weight": 4,
+        "word": "effervescence",
+        "id": "8SKep1BiT3DbHdp36ik1"
+    },
+    {
+        "definition": "''Usually in a negative sense'': conspicuous, exceptional, outstanding.",
+        "word": "egregious",
+        "id": "blRBvRGogug3Yb4eDEXo"
+    },
+    {
+        "definition": "weird and sinister or ghostly",
+        "flash_weight": -1,
+        "word": "eldritch",
+        "id": "OXik9xroVNkcZQQRjk7o"
+    },
+    {
+        "definition": "an earnest or humble request",
+        "word": "entreaty",
+        "id": "QFdHM9SwAVxM7DnRBBnM"
+    },
+    {
+        "definition": "surprise (someone) greatly; astonish",
+        "flash_weight": -1,
+        "word": "flabbergast",
+        "id": "dQnXwHQPJmTuvHlYg6QB"
+    },
+    {
+        "definition": "fall, move, or hang in a loose and ungainly way",
+        "word": "flop",
+        "id": "MW3Hv3k7e1jiglQntXcz"
+    },
+    {
+        "definition": "a duct for smoke and waste gases produced by a fire, a gas heater, a power station, or other fuel-burning installation",
+        "flash_weight": -1,
+        "word": "flue",
+        "id": "IP6zxdbS7o6bbzZ22qy2"
+    },
+    {
+        "definition": "causing annoyance or resentment; annoying",
+        "flash_weight": 3,
+        "word": "galling",
+        "id": "Uw2pAMFt0F2I9l69QUp0"
+    },
+    {
+        "definition": "A glance, look.",
+        "word": "gander",
+        "id": "vKcktEt3Oe66ZoQEJNM0"
+    },
+    {
+        "definition": "excessively talkative, especially on trivial matters",
+        "flash_weight": 1,
+        "word": "garrulous",
+        "id": "1h9abCXFNjQshB5KzT40"
+    },
+    {
+        "definition": "extravagantly bright or showy, typically so as to be tasteless",
+        "word": "gaudy",
+        "id": "eD4mirr6ii8G4f4GbTWQ"
+    },
+    {
+        "definition": "Describing one who enjoys being in crowds and socializing.",
+        "word": "gregarious",
+        "id": "Xf92kN14dAAkyaIKMCcI"
+    },
+    {
+        "definition": "cartilage, especially when found as tough inedible tissue in meat.",
+        "flash_weight": -3,
+        "word": "gristle",
+        "id": "dPFZZ9djjJSaLEKE37kf"
+    },
+    {
+        "definition": "a saint or holy person.",
+        "word": "hallow",
+        "id": "1YNmL0RuyfPcJQWphXvk"
+    },
+    {
+        "definition": "a basket with a carrying handle and a hinged lid, used for food, cutlery, and plates on a picnic",
+        "word": "hamper",
+        "id": "KTCotdBgJsFaPaOg90cH"
+    },
+    {
+        "definition": "coincidence",
+        "flash_weight": -3,
+        "word": "happenstance",
+        "id": "gfCOicPi25Z4ulyB9rsL"
+    },
+    {
+        "definition": "an adult male deer, especially a red deer over five years old.",
+        "flash_weight": 0,
+        "word": "hart",
+        "id": "JVNqOcTtKgj71pxYPO2n"
+    },
+    {
+        "definition": "a person who does not belong to a widely held religion (especially one who is not a Christian, Jew, or Muslim) as regarded by those who do",
+        "word": "heathen",
+        "id": "RqWFgetR547GqMnKfXpB"
+    },
+    {
+        "definition": "lift or carry (something heavy)",
+        "word": "heft",
+        "id": "ydI2u3wwz0fiwXwP7IOt"
+    },
+    {
+        "definition": "give a loud shout or cry",
+        "flash_weight": 0,
+        "word": "holler",
+        "id": "PSZ9M35RRDkKmhpZY38Z"
+    },
+    {
+        "definition": "Excessive pride, presumption or arrogance (originally toward the gods).",
+        "word": "hubris",
+        "id": "HYmbI0zAhJD2uo8Ibfar"
+    },
+    {
+        "definition": "wanting to avoid activity or exertion; lazy",
+        "word": "indolent",
+        "id": "WS2FfTjjIzuVTCjiOuif"
+    },
+    {
+        "definition": "a space on either side of a large fireplace",
+        "flash_weight": -2,
+        "word": "inglenook",
+        "id": "MiCbNT3iB3BJpee2SApF"
+    },
+    {
+        "definition": "lacking flavour; weak or tasteless",
+        "flash_weight": -3,
+        "word": "insipid",
+        "id": "WUmfMKyAZ3Nl2Lr0wsCQ"
+    },
+    {
+        "definition": "push or shake (someone or something) abruptly and roughly",
+        "word": "jolt",
+        "id": "6VBuCXeu5UsUbeqHETei"
+    },
+    {
+        "definition": "characterized by tiredness or inactivity, especially of a pleasurable kind",
+        "flash_weight": 0,
+        "word": "languorous",
+        "id": "rN3KbCC2ED9fFKS8KZaa"
+    },
+    {
+        "definition": "having or showing excessive or offensive sexual desire",
+        "word": "lecherous",
+        "id": "yDbnB4NwLq1jZ2a8QdQz"
+    },
+    {
+        "definition": "Excessively or falsely sentimental; showing a sickly excess of sentiment; maudlin.",
+        "word": "mawkish",
+        "id": "9odPQtqvnbzRRLjssVHC"
+    },
+    {
+        "definition": "mix (a drink) or stir (an ingredient) into a drink",
+        "word": "muddle",
+        "id": "b5XKD7lTTQk0PC300xyJ"
+    },
+    {
+        "definition": "harmful, poisonous, or very unpleasant",
+        "word": "noxious",
+        "id": "gxZtr2JaORBxeuqrkZqL"
+    },
+    {
+        "definition": "the branch of metaphysics dealing with the nature of being.",
+        "flash_weight": -1,
+        "word": "ontology",
+        "id": "iwUVW50cvHvYnR2cBizR"
+    },
+    {
+        "definition": "hungry",
+        "flash_weight": -3,
+        "word": "peckish",
+        "id": "DhMSzC7a0AGmPCW9bQVe"
+    },
+    {
+        "definition": "A program or campaign to subjugate or eliminate a specific group of people, often based on race, religion, sexuality, or social beliefs.",
+        "word": "persecution",
+        "id": "RPlzL6SCBIIGqB8M30cY"
+    },
+    {
+        "definition": "steal (things of little value)",
+        "word": "pilfer",
+        "id": "WjYxCjYUtyUuHD08Mv2f"
+    },
+    {
+        "definition": "walk doggedly and slowly with heavy steps",
+        "word": "plod",
+        "id": "aO00TBeRkKXmbpukBXwx"
+    },
+    {
+        "definition": "slow and clumsy because of great weight",
+        "flash_weight": -3,
+        "word": "ponderous",
+        "id": "7geIvjZdFw8XUcffpz6H"
+    },
+    {
+        "definition": "Of momentous or ominous significance.",
+        "word": "portentous",
+        "id": "WUHew5uaVurdMtSmUaYu"
+    },
+    {
+        "definition": "attractively unusual or old-fashioned",
+        "flash_weight": -2,
+        "word": "quaint",
+        "id": "4TlDmQfSIcfOr9NNJJio"
+    },
+    {
+        "definition": "aggressively greedy or grasping",
+        "flash_weight": 7,
+        "word": "rapacious",
+        "id": "UdRfj4UDakWhREGHQgTt"
+    },
+    {
+        "definition": "To become less rigid or hard; to soften; to yield; to dissolve; to melt; to deliquesce.",
+        "word": "relent",
+        "id": "ebVELecgqZQjMpKuEscU"
+    },
+    {
+        "definition": "bitterly regret (something one has done or allowed to happen) and wish it undone",
+        "flash_weight": 4,
+        "word": "rue",
+        "id": "YJ4ddCCOgU5CO3b79SaS"
+    },
+    {
+        "definition": "health-giving; healthy",
+        "word": "salubrious",
+        "id": "fNp1wN3V9aY251yoI0GS"
+    },
+    {
+        "definition": "mawkishly over-sentimental",
+        "flash_weight": 1,
+        "word": "sappy",
+        "id": "zqY8Qj079XccXsQkVdWI"
+    },
+    {
+        "definition": "relating to tailoring, clothes, or style of dress",
+        "flash_weight": 0,
+        "word": "sartorial",
+        "id": "i2ijDAlTBXHo0l8UJCix"
+    },
+    {
+        "definition": "frown in an angry or bad-tempered way",
+        "word": "scowl",
+        "id": "lp8kzQ7tjK3xG7hMUvLd"
+    },
+    {
+        "definition": "make one's way quickly or awkwardly up a steep gradient or over rough ground by using one's hands as well as one's feet",
+        "flash_weight": -2,
+        "word": "scramble",
+        "id": "sQVJI4slFxVS5L8GVbOs"
+    },
+    {
+        "definition": "filled with or characterized by intense but unexpressed anger",
+        "word": "seething",
+        "id": "WobcYRAlGtAUSlHv6gAo"
+    },
+    {
+        "definition": "the occurrence and development of events by chance in a happy or beneficial way",
+        "flash_weight": -1,
+        "word": "serendipity",
+        "id": "f7mSGTHj1ZrQQ2dBTpXB"
+    },
+    {
+        "definition": "fine sand, clay, or other material carried by running water and deposited as a sediment, especially in a channel or harbour.",
+        "flash_weight": -1,
+        "word": "silt",
+        "id": "5NDf53ju3Ebgk7BDVJ9w"
+    },
+    {
+        "definition": "rain containing some ice, as when snow melts as it falls",
+        "flash_weight": -4,
+        "word": "sleet",
+        "id": "INrdgbFd65WgM4ZCftc3"
+    },
+    {
+        "definition": "(of liquid in a container) move irregularly with a splashing sound",
+        "word": "slosh",
+        "id": "hSBbOgWyjhZvUtOaJT9P"
+    },
+    {
+        "definition": "(of an animal such as a dog) make an aggressive growl with bared teeth",
+        "flash_weight": -1,
+        "word": "snarl",
+        "id": "eO9SYxHAnBcGpuDIVxKg"
+    },
+    {
+        "definition": "laughing in a half-suppressed, typically scornful way",
+        "flash_weight": 0,
+        "word": "sniggering",
+        "id": "WRvoPYcrLTguQDx8kIMn"
+    },
+    {
+        "definition": "sentimental, maudlin, bathetic, schmaltzy",
+        "word": "soppy",
+        "id": "rsMrlrM8FFAtkLMnhKRI"
+    },
+    {
+        "definition": "a person who spends money in an extravagant, irresponsible way",
+        "flash_weight": -4,
+        "word": "spendthrift",
+        "id": "Om64wZbWKkYfsOah5GMs"
+    },
+    {
+        "definition": "reject with disdain or contempt",
+        "flash_weight": -1,
+        "word": "spurn",
+        "id": "BVxKj8EO4iwUz3HOyNLw"
+    },
+    {
+        "definition": "a soft sucking sound made when pressure is applied to liquid or mud",
+        "word": "squelch",
+        "id": "dtAdInIMZHJ7JKtKSm1K"
+    },
+    {
+        "definition": "To feed, stir up, especially, a fire or furnace.",
+        "word": "stoke",
+        "id": "t6pVHXyJiTMjDJJsAnr1"
+    },
+    {
+        "definition": "requiring or using great effort or exertion",
+        "word": "strenuous",
+        "id": "NFfN4Ifr5ZN4cXFZMK3f"
+    },
+    {
+        "definition": "To spread through or over something, especially as a liquid, colour or light; to bathe.",
+        "word": "suffuse",
+        "id": "EPjtnB1ZT9bYnIsmcA0A"
+    },
+    {
+        "definition": "walk or behave in a very confident and arrogant or self-important way",
+        "flash_weight": -3,
+        "word": "swagger",
+        "id": "Zs3GEdWh5Va9I7eMl9As"
+    },
+    {
+        "definition": "display one's wealth, knowledge, or achievements in a way that is intended to impress others",
+        "word": "swank",
+        "id": "6kJXGRtZ0BKzlP35miPk"
+    },
+    {
+        "definition": "relating to or involving the explanation of phenomena in terms of the purpose they serve rather than of the cause by which they arise",
+        "flash_weight": 1,
+        "word": "teleological",
+        "id": "20oDCF3OfgSwWJXiEpEb"
+    },
+    {
+        "definition": "(especially of a liquid) only slightly warm; lukewarm",
+        "word": "tepid",
+        "id": "8btmowPkVKFhDWGpBeYf"
+    },
+    {
+        "definition": "(of a remark or idea) lacking originality or freshness; dull on account of overuse",
+        "flash_weight": 2,
+        "word": "trite",
+        "id": "9hqAajCCCdwhzRhwX6Q5"
+    },
+    {
+        "definition": "Vengeance; revenge; persecution; punishment; consequence; trouble.",
+        "word": "wrack",
+        "id": "q6EgYEgL9GHwsPyFmX6p"
+    },
+    {
+        "definition": "the defining spirit or mood of a particular period of history as shown by the ideas and beliefs of the time.",
+        "flash_weight": -4,
+        "word": "zeitgeist",
+        "id": "FMYDB715SdHBJ7SrY6uS"
+    }
+]

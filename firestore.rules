@@ -1,0 +1,8 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+ 		match /words/{userId}/entries/{entryId} {
+      allow read: if request.auth.uid == userId;
+      allow write: if request.auth.uid == userId;
+    }
+  }
+}

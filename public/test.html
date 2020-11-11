@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--
+Copyright 2020 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://my-words-69377.firebaseapp.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Words</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script type="text/javascript">
+        function lookupWord() {
+            const searchText = "world";
+            
+            //const url = "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrsearch=" + searchText + "&origin=*&gsrlimit=15&prop=extracts&exsentences=3&exintro=&explaintext&exlimit=max&callback=JSON_CALLBACK";
+            const url = "https://en.wiktionary.org/w/api.php?format=json&action=query&origin=*&export&exportnowrap&titles=" + searchText;
+            //const url = "https://en.wiktionary.org/w/index.php?title=world&printable=yes&origin=*";
+                    
+            const xmlHttpRequest = new XMLHttpRequest();
+            xmlHttpRequest.open("GET", url);
+            // xmlHttpRequest.withCredentials = true;
+            xmlHttpRequest.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+
+
+            xmlHttpRequest.send();
+            xmlHttpRequest.onreadystatechange = (e) => {
+                if (xmlHttpRequest.readyState == 4) {
+                    if (xmlHttpRequest.status == 200) {
+                        //payload = JSON.parse(xmlHttpRequest.responseText);
+                        //console.log(xmlHttpRequest.responseText);
+                        const parser = new DOMParser();
+                        const xmlDoc = parser.parseFromString(xmlHttpRequest.responseText, "text/xml");
+                        const text = xmlDoc.getElementsByTagName("text")[0].innerHTML;
+                        console.log(text);
+                    } else {
+                        console.log("Error fetching definition: " + xmlHttpRequest.status);
+                    }
+                }
+            }
+        }
+
+    </script>
+
+    <style type="text/css">
+        .word-card {
+            margin: 16px;
+            padding: 0px 16px 16px 16px;
+        }
+
+        .avatar {
+            border-radius: 50px;
+            margin: 10px;
+        }
+
+        .flip-card {
+            perspective: 1000px;
+        }
+
+        .flip-card,
+        .flip-card-front,
+        .flip-card-back {
+            width: 320px;
+            height: 480px;
+        }
+
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
+            position: relative;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Position the front and back side */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            z-index: 2;
+            transform: rotateY(0deg);
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
+                <span class="mdc-top-app-bar__title">My Words</span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Sign out" alt="Sign out"
+                    style="background: url('https://lh6.googleusercontent.com/-QrOZKWeLQo8/AAAAAAAAAAI/AAAAAAAAAAA/2BHTDyH7czA/photo.jpg') center center no-repeat; background-size: contain; border-radius: 50px;"></a>
+            </section>
+        </div>
+    </header>
+
+    <div class="mdc-top-app-bar--fixed-adjust">
+
+        <!--
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front mdc-card">
+                    <h2 class="mdc-typography--headline6">Adventure</h2>
+                </div>
+                <div class="flip-card-back mdc-card">
+                    <div class="mdc-typography--body2">an unusual and exciting, typically hazardous, experience or
+                        activity.
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+
+        <div class="mdc-card word-card" id="action-card">
+            <button class="mdc-top-app-bar__action-item avatar"
+                style="background: url('https://lh6.googleusercontent.com/-QrOZKWeLQo8/AAAAAAAAAAI/AAAAAAAAAAA/2BHTDyH7czA/photo.jpg') center center no-repeat; background-size: contain; border-radius: 50px;"></button>
+            <h2 class="mdc-typography--headline6">Dave</h2>
+            <div class="mdc-typography--body2">user@hotmail.com</div>
+        </div>
+        <div class="mdc-card word-card">
+            <h2 class="mdc-typography--headline6">Adventure</h2>
+            <div class="mdc-typography--body2">an unusual and exciting, typically hazardous, experience or activity.
+            </div>
+        </div>
+        <div class="mdc-card word-card">
+            <h2 class="mdc-typography--headline6">Joy</h2>
+            <div class="mdc-typography--body2">an unusual and exciting, typically hazardous, experience or activity.
+            </div>
+        </div>
+        <div class="mdc-card word-card">
+            <h2 class="mdc-typography--headline6">Adventure</h2>
+            <div class="mdc-typography--body2">an unusual and exciting, typically hazardous, experience or activity.
+            </div>
+        </div>
+        <div class="mdc-card word-card">
+            <h2 class="mdc-typography--headline6">Adventure</h2>
+            <div class="mdc-typography--body2">an unusual and exciting, typically hazardous, experience or activity.
+            </div>
+        </div>
+        <div class="mdc-card word-card">
+            <h2 class="mdc-typography--headline6">Adventure</h2>
+            <div class="mdc-typography--body2">an unusual and exciting, typically hazardous, experience or activity.
+            </div>
+        </div>
+        <div class="mdc-card word-card">
+            <h2 class="mdc-typography--headline6">Adventure</h2>
+            <div class="mdc-typography--body2">an unusual and exciting, typically hazardous, experience or activity.
+            </div>
+        </div>
+        <div class="mdc-card word-card">
+            <h2 class="mdc-typography--headline6">Adventure</h2>
+            <div class="mdc-typography--body2">an unusual and exciting, typically hazardous, experience or activity.
+            </div>
+        </div>
+        <div class="mdc-card word-card">
+            <h2 class="mdc-typography--headline6">Adventure</h2>
+            <div class="mdc-typography--body2">an unusual and exciting, typically hazardous, experience or activity.
+            </div>
+        </div>
+        <div class="mdc-card word-card">
+            <h2 class="mdc-typography--headline6">Adventure</h2>
+            <div class="mdc-typography--body2">an unusual and exciting, typically hazardous, experience or activity.
+            </div>
+        </div>
+        <div class="mdc-card word-card">
+            <h2 class="mdc-typography--headline6">Adventure</h2>
+            <div class="mdc-typography--body2">an unusual and exciting, typically hazardous, experience or activity.
+            </div>
+        </div>
+        <div class="mdc-card word-card">
+            <h2 class="mdc-typography--headline6">Adventure</h2>
+            <div class="mdc-typography--body2">an unusual and exciting, typically hazardous, experience or activity.
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        document.querySelector("#action-card").addEventListener("click", function() {
+            lookupWord();
+        });
+    </script>
+</body>
+
+</html>
